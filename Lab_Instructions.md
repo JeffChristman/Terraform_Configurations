@@ -14,7 +14,7 @@ the trace and discover how the hackers exploited the server.
 
 ![](mainscreenLine8.png)
 7. Observe that the packet is IPv4 and is fragmented. This is not normal and deserve more investigation
-![](fragmented packet.jpg)
+![](fragmentedpacket.jpg)
 
 8. Click in line 9, the rest of the fragmented packet. 
 9.  Looking at the bottom left window, you can see Wireshark has already marked a couple of issues indicated by the red highlight. Kets investigate further 
