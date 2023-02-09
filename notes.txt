@@ -1,0 +1,19 @@
+Most systems aren't designed to transfer large amounts of data from another source in one go. 
+As a result, most systems fragment data in transit. The recipient reassembles it based on rules 
+written into the software.
+
+Networks set maximum transmission units (MTUs) that specify how much data they can process at once. 
+Most networks use a 1,500-byte limit. Send something bigger, and it will be:
+
+Fragmented. The originating device or its associated routers break the piece into fragment datagrams.
+
+Sent. All of the pieces head to the destination with headers that describe the order for reassembly.
+
+Reassembled. The destination server waits for all the fragments to arrive. When they're in place, 
+the system puts the message back together and delivers it.
+
+Some older operating systems contain a bug. They grow confused during the reassembly phase, 
+especially when the data packets seem to overlap by a byte or two.
+
+When the system is confused, it pauses, thinks, and then crashes. A crashed server can't deliver resources, 
+and your customers and employees can't do their crucial work.
