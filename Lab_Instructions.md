@@ -11,7 +11,7 @@ the trace and discover how the hackers exploited the server.
 4. Navigate to the tmp folder and open teardrop.cap 
 5. Analyse the traffic patterns in the catpure trace and notice that the packets start to fragment at line 8 
 6. Move your mouse to line 8 and click once to bring up the data in the packet in the lower data windows windows.
-![](fragmentedpackets.png)
+![](mainscreenlin8.png)
 7. Observe that the packet is IPv4 and is fragmented. This is not normal and deserve more investigation
 8. Click in line 9, the rest of the fragmented packet. 
 9.  Looking at the bottom left window, you can see Wireshark has already marked a couple of issues indicated by the red highlight. Kets investigate further 
