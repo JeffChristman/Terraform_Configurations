@@ -22,6 +22,8 @@ Extract the public IP address and note the address
 
 SSH into the virtual machine
 
+`ssh -i id_rsa azureuser@<public_ip_address>`
+
 copy the pcap file to the virtual machine
 
 `scp -i id_rsa teardrop.cap azureuser@74.235.17.169:/tmp`
