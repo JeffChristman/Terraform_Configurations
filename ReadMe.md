@@ -24,7 +24,8 @@ SSH into the virtual machine
 
 `ssh -i id_rsa azureuser@<public_ip_address>`
 
-copy the pcap file to the virtual machine
+Copy the pcap file to the virtual machine to the /tmp directory
 
 `scp -i id_rsa teardrop.cap azureuser@74.235.17.169:/tmp`
 
+The environment is ready for the lab. 
