@@ -20,3 +20,9 @@ Extract the public IP address and note the address
 
 `.\terraform output public_ip_address <public IP Address>`
 
+SSH into the virtual machine
+
+copy the pcap file to the virtual machine
+
+`scp -i id_rsa teardrop.cap azureuser@74.235.17.169:/tmp`
+
