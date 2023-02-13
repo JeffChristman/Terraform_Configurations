@@ -10,17 +10,13 @@ I am making the following assumptions
 
 ### Prerequisites for the environment setup 
 
-Run the terraform script to create the test vm
+Run the terraform script to create the test vm in the azure cloud. 
 
 Extract the private key and save localy by executing the following command 
 
 `.\terraform output -raw tls_private_key > id_rsa`
 
-The evaluator understands how to run terraform and create the test environment.
-2.  
+Extract the public IP address and note the address 
 
-The terraform script will create a linux server on the Azure cloud service. 
+`.\terraform output public_ip_address <public IP Address>`
 
-Setting up the environment to complete the lab. 
-
-Initialize the terrform 
