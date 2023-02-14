@@ -85,39 +85,10 @@ Enter the following
 ![](https://github.com/JeffChristman/PL_labs/blob/main/png/filterForFrag.png)
 
 
->>Insert Picture 
 
-
-
-
-
-
-
-9. t
-10. t
-11. t
-12. t
-13. t
-14. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Analysis Report 
+From the analysis you completed, it was determined that the hackers used a teardrop attack which exploits a bug in the code in older systems that handles large amounts of traffic. Teardrop is a type of DDOS  (Distributed Denial of Service) attack. Further investigation revealed that the vulnerable system was an older unpatched system that the hackers exploited to gain access to the network. 
  
-
-
-The first step is to login to the server using SSH 
 
 
 
