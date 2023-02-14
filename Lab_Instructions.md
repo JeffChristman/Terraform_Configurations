@@ -87,6 +87,8 @@ Based on the above output, it appears the only fragemented packets are from 10.1
 With the analysis complete, you meet with Globalmantics Security team to go over the results.
 
 From the analysis you completed, it was determined that Dark Kittens used a teardrop attack which exploits a bug in the code in older systems that handles large amounts of traffic. Teardrop is a type of DDOS  (Distributed Denial of Service) attack. The attack crashed the server and left it vulnerable for further exploitation. Further investigation determined that this server was used as a entry point to the Globalmantics.  
+
+Mitigation for the attacks is to update the server hardware and patch with the latest version of the software or decommision the server and remove from the network. 
  
 
 
