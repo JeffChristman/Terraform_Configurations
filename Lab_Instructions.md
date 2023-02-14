@@ -46,7 +46,6 @@ Start by looking at the whole trace and see if there is some interesting packet.
 
 ![](https://github.com/JeffChristman/PL_labs/blob/main/png/fullpacket.png)
 
->>>>Insert picture
 
 The output looks a bit overwhelming, lets filter the output to only IP traffic and make it easier to find interesting traffic. 
 
@@ -83,7 +82,6 @@ Enter the following
 `tcpdump -r capture.cap '((ip[6:2] > 0) and (not ip[6] = 64))' -vv -x`
 
 ![](https://github.com/JeffChristman/PL_labs/blob/main/png/filterForFrag.png)
-
 
 
 ### Analysis Report 
