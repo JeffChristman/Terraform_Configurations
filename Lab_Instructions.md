@@ -9,7 +9,8 @@ The network security team has created an exact copy of the breached server and t
 ## Prerequisites:
 1. Basic understanding of Linux and how to esxecute BASH Shell commands
 2. Familier with SSH 
-3. Working knowledge of TCPDUMP 
+3. The private key file - Privided as a download
+4. Working knowledge of TCPDUMP 
 
 
 ### Intrusion Analysis Lab
