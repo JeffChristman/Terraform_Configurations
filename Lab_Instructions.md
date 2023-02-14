@@ -1,5 +1,6 @@
-# Intrusion Analysis: Analysing a network trace to determine the explot to gain access. 
-## In this lab you will analyze the network packet trace and discover how the hacker inflitrated the network.
+# Intrusion Analysis: 
+## Analysing a network trace to determine how the hackers gained access to the server.<br>
+### In this lab you will analyze the network packet trace and discover how the hacker inflitrated the network.
 
 You are the senior intrusion analyst and after the most recent security breach, the CSO has asked for a post mortem of the event to determine the need to know how the hackers infiltraded network and stole the 
 codebase of the CRM program. You have been given a network trace from the hacked server and its your job to analyse 
