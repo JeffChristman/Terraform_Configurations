@@ -56,11 +56,8 @@ Enter the following command:
 ![](https://github.com/JeffChristman/PL_labs/blob/main/png/tcpdumpip.png)
 
 
-
 Now that we have just the IP traffic, it looks like there is an issue with IP address 10.1.1.1. Something does not look right. We need more data on 10.1.1.1
-To get more information about the packets, lets isolate the source address 10.1.1.1 and inlcude the hexidecimal output to take a closer look.
-
-The next command will include -vv for "very Verbose" and -x to inlcude the hexidecimal out.
+To get more information about the packets, lets isolate the source address 10.1.1.1 and inlcude the hexidecimal output to take a closer look. The next command will include -vv for "very Verbose" and -x to inlcude the hexidecimal out.
 
 Enter the following command 
 
