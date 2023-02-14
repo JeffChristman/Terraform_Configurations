@@ -28,14 +28,17 @@ The first step is to get the public IP address of the virtual machine so that we
 
 `ssh -i id_rsa azureuser@<public_ip_address>`
 
-6. 
-7. t
+6. once connected, type YES to accept the certificate
+7. Then Navigate to the TMP directory by entering the following command
+`cd /tmp`
+
 8. t
 9. t
 10. t
 11. t
 12. t
-13. 
+13. t
+14. 
 
 
 
