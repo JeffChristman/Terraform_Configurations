@@ -18,10 +18,35 @@ The first step is to get the public IP address of the virtual machine so that we
 
 1. Login to the lab and open the main Azure Console. 
 2. On the left menu under settings, click on Resource Groups 
+>>>Insert Picture
+
+3. Click on MyPublicIP and on the top right, you will see the assigned public IP address - write this down. 
+>>>>>Insert Picture
+
+5. Login to the virtual Machine with SSH using the folling command 
+`
+
+7. t
+8. t
+9. t
+10. t
+11. t
+12. t
+13. 
 
 
 
-3. 
+
+
+
+
+
+
+
+
+
+
+
 
  
 
