@@ -24,15 +24,36 @@ The first step is to get the public IP address of the virtual machine so that we
 3. Click on MyPublicIP and on the top right, you will see the assigned public IP address - write this down. 
 >>>>>Insert Picture
 
-5. Login to the virtual Machine with SSH with the provided private key using the following command
+5. Login to the virtual Machine with SSH with the provided private key using the following command.
 
 `ssh -i id_rsa azureuser@<public_ip_address>`
 
 6. once connected, type YES to accept the certificate
-7. Then Navigate to the TMP directory by entering the following command
+7. Then Navigate to the TMP directory by entering the following command: 
+
 `cd /tmp`
 
-8. t
+
+### Analyzing the packet trace 
+Now that you have logged into the compromized server, lets begin the intrusion analyses. The capture.cap file is the file we are interested in. 
+
+Start by looking at the whole trace and see if there is some interesting packet. Enter the following command 
+
+`tcpdump -r capture.cap`
+
+>>>>Insert picture
+The output looks overwhelming, lets filter the output to only IP traffic and make it easier to find interesting traffic. 
+
+Enter the following command: 
+
+`tcpdump -r capture.cap ip'
+>>>>>>.Insert Picture
+
+
+
+
+
+
 9. t
 10. t
 11. t
