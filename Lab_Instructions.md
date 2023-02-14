@@ -1,8 +1,8 @@
 # Intrusion Analysis: 
-## Analysing a network trace to determine how the hackers gained access to the server.<br>
+## Analysing a network trace to determine how the Dark Kittens gained access to the server.<br>
 #### In this lab you will analyze the network packet trace and discover how the hacker inflitrated the network.
 
-You are the senior intrusion analyst and after the most recent security breach, the CSO has asked for a post mortem of the event to determine the need to know how the hackers infiltraded network and stole the codebase of the CRM program. 
+You are the senior intrusion analyst at Globalmantics and after the most recent security breach, the CSO has asked for a post mortem of the event to determine the need to know how the Dark Kittens infiltraded network and stole the codebase of the CRM program. 
 
 The network security team has created an exact copy of the breached server and the network packet capture that was taken during the security breach. It will be your job to login to the server, analyse the network trace and determine the method that was used to gain access. 
 
@@ -86,7 +86,7 @@ Based on the above output, it appears the only fragemented packets are from 10.1
 ### Analysis Report 
 With the analysis complete, you meet with Globalmantics Security team to go over the results.
 
-From the analysis you completed, it was determined that the hackers used a teardrop attack which exploits a bug in the code in older systems that handles large amounts of traffic. Teardrop is a type of DDOS  (Distributed Denial of Service) attack. Further investigation revealed that the vulnerable system was an older unpatched system that the hackers exploited to gain access to the network. 
+From the analysis you completed, it was determined that Dark Kittens used a teardrop attack which exploits a bug in the code in older systems that handles large amounts of traffic. Teardrop is a type of DDOS  (Distributed Denial of Service) attack. The attack crashed the server and left it vulnerable for further exploitation. Further investigation determined that this server was used as a entry point to the Globalmantics.  
  
 
 
