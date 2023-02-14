@@ -24,9 +24,11 @@ The first step is to get the public IP address of the virtual machine so that we
 3. Click on MyPublicIP and on the top right, you will see the assigned public IP address - write this down. 
 >>>>>Insert Picture
 
-5. Login to the virtual Machine with SSH using the folling command 
-`
+5. Login to the virtual Machine with SSH with the provided private key using the following command
 
+`ssh -i id_rsa azureuser@<public_ip_address>`
+
+6. 
 7. t
 8. t
 9. t
