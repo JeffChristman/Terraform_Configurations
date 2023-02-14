@@ -80,8 +80,12 @@ Enter the following
 
 ![](https://github.com/JeffChristman/PL_labs/blob/main/png/filterForFrag.png)
 
+Based on the above output, it appears the only fragemented packets are from 10.1.1.1. With the other information gathered from your analysis, this appears to be a teardrop Denial of service attack coming from IP address 10.1.1.1
+
 
 ### Analysis Report 
+With the analysis complete, you meet with Globalmantics Security team to go over the results.
+
 From the analysis you completed, it was determined that the hackers used a teardrop attack which exploits a bug in the code in older systems that handles large amounts of traffic. Teardrop is a type of DDOS  (Distributed Denial of Service) attack. Further investigation revealed that the vulnerable system was an older unpatched system that the hackers exploited to gain access to the network. 
  
 
