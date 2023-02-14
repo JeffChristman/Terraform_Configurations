@@ -16,6 +16,8 @@ Extract the private key and save localy by executing the following command
 
 `.\terraform output -raw tls_private_key > id_rsa`
 
+Note: This private key should be made available to the user as a download for the user to complete the lab
+
 Extract the public IP address and note the address 
 
 `.\terraform output public_ip_address <public IP Address>`
