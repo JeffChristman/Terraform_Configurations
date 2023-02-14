@@ -59,6 +59,24 @@ Enter the following command
 
 `tcpdump -r capture.cap ip src host 10.1.1.1 -vv -xx'
 
+In analyzing the output, it appears that the traffic from 10.1.1.1 is fragmented and overlapping offsets. 
+
+>>>Insert Picuter
+
+Lets verify the finding and confirm that the packets from 10.1.1.1 are fragmented. For the next coomand, the the following filter 
+
+`'((ip[6:2] > 0) and (not ip[6] = 64))'`
+
+The above filter will parse the individual fields of the packet and look for fragemented packets within the whole trace.
+
+
+Enter the following 
+
+`tcpdump -r capture.cap '((ip[6:2] > 0) and (not ip[6] = 64))' -vv -x`
+
+>>Insert Picture 
+
+
 
 
 
