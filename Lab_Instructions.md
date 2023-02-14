@@ -1,4 +1,4 @@
-# Investigating a network trace for hacking
+# Intrusion Analysis: Analysing a network trace to determine the explot to gain access. 
 ## In this lab you will analyze the network packet trace and discover how the hacker inflitrated the network.
 
 After the recent hacking incident, the CTO need to know how the hackers infiltraded network and stole the 
