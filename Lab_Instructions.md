@@ -14,6 +14,18 @@ The network security team has created an exact copy of the breached server and t
 
 ### Intrusion Analysis Lab
 
+The first step is to get the public IP address of the virtual machine so that we can login using SSH
+
+1. Login to the lab and open the main Azure Console. 
+2. On the left menu under settings, click on Resource Groups 
+
+
+
+3. 
+
+ 
+
+
 The first step is to login to the server using SSH 
 
 
