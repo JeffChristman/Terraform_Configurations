@@ -23,7 +23,9 @@ The first step is to get the public IP address of the virtual machine so that we
 ![](https://github.com/JeffChristman/PL_labs/blob/main/png/mypublicIP.png)
 
 3. Click on MyPublicIP and on the top right, you will see the assigned public IP address - write this down. 
->>>>>Insert Picture
+
+![](https://github.com/JeffChristman/PL_labs/blob/main/png/PublicIP.png)
+
 
 5. Login to the virtual Machine with SSH with the provided private key using the following command.
 
@@ -42,14 +44,19 @@ Start by looking at the whole trace and see if there is some interesting packet.
 
 `tcpdump -r capture.cap`
 
+![](https://github.com/JeffChristman/PL_labs/blob/main/png/fullpacket.png)
+
 >>>>Insert picture
 
 The output looks a bit overwhelming, lets filter the output to only IP traffic and make it easier to find interesting traffic. 
 
 Enter the following command: 
 
-`tcpdump -r capture.cap ip'
->>>>>>.Insert Picture
+`tcpdump -r capture.cap ip`
+
+![](https://github.com/JeffChristman/PL_labs/blob/main/png/tcpdumpip.png)
+
+
 
 Now that we have just the IP traffic, it looks like there is an issue with IP address 10.1.1.1. Something does not look right. We need more data on 10.1.1.1
 To get more information about the packets, lets isolate the source address 10.1.1.1 and inlcude the hexidecimal output to take a closer look.
@@ -58,22 +65,25 @@ The next command will include -vv for "very Verbose" and -x to inlcude the hexid
 
 Enter the following command 
 
-`tcpdump -r capture.cap ip src host 10.1.1.1 -vv -xx'
+`tcpdump -r capture.cap ip src host 10.1.1.1 -vv -xx`
 
 In analyzing the output, it appears that the traffic from 10.1.1.1 is fragmented and overlapping offsets. 
 
->>>Insert Picuter
+![](https://github.com/JeffChristman/PL_labs/blob/main/png/offset.png)
 
-Lets verify the finding and confirm that the packets from 10.1.1.1 are fragmented. For the next coomand, the the following filter 
+
+Lets verify the finding and confirm that the packets from 10.1.1.1 are fragmented. For the next coomand, the following filter will parse the capture file looking for fragmented packets. 
 
 `'((ip[6:2] > 0) and (not ip[6] = 64))'`
 
 The above filter will parse the individual fields of the packet and look for fragemented packets within the whole trace.
 
-
 Enter the following 
 
 `tcpdump -r capture.cap '((ip[6:2] > 0) and (not ip[6] = 64))' -vv -x`
+
+![](https://github.com/JeffChristman/PL_labs/blob/main/png/filterForFrag.png)
+
 
 >>Insert Picture 
 
