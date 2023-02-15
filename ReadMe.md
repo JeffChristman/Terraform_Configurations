@@ -1,4 +1,4 @@
-## EVALUATOR PLEASE READ 
+## Installing the environment 
 The following steps will set up the environment for the lab.
 
 ### Prerequisites for the environment setup 
@@ -6,7 +6,7 @@ The following steps will set up the environment for the lab.
 Run the terraform script to create the test vm in the azure cloud. <br>
 <br>
 
-Extract the private key and save localy by executing the following command 
+Extract the private key and save locally by executing the following command 
 
 `.\terraform output -raw tls_private_key > id_rsa`
 
