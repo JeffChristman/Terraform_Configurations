@@ -1,11 +1,5 @@
 ## EVALUATOR PLEASE READ 
-I do not know the experience level of the person evalauting this lab and 
-I am making the following assumptions 
-
-1. The person evaluating the lab has some familiarity with terrafrom. 
-2. The steps below will be automated and inlcuded as part of the terraform script 
-3. Plurasight has a preffered authentication method that allows the user to login to the virtual machine
-
+The following steps will set up the environment for the lab.
 
 ### Prerequisites for the environment setup 
 
