@@ -16,16 +16,16 @@ Note: This private key should be made available to the user as a download for th
 Extract the public IP address and note the address 
 
 `.\terraform output public_ip_address <public IP Address>`<br>
-
+<br>
 
 SSH into the virtual machine
 
 `ssh -i id_rsa azureuser@<public_ip_address>`<br>
-
+<br>
 
 Copy the pcap file to the virtual machine to the /tmp directory
 
 `scp -i id_rsa capture.cap azureuser@74.235.17.169:/tmp`<br>
-
+<br>
 
 The environment is ready for the lab. 
