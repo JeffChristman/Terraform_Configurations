@@ -4,7 +4,7 @@ The following steps will set up the environment for the lab.
 ### Prerequisites for the environment setup 
 
 Run the terraform script to create the test vm in the azure cloud. <br>
-
+<br>
 
 Extract the private key and save localy by executing the following command 
 
