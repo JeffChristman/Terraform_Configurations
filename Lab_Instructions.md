@@ -59,8 +59,11 @@ Enter the following command:
 ![](https://github.com/JeffChristman/PL_labs/blob/main/png/tcpdumpip.png)
 
 
-Now that we have just the IP traffic, it looks like there is an issue with IP address 10.1.1.1. Something does not look right. We need more data on 10.1.1.1
-To get more information about the packets, lets isolate the source address 10.1.1.1 and inlcude the hexidecimal output to take a closer look. The next command will include -vv for "very Verbose" and -x to inlcude the hexidecimal out.
+Now that we have just the IP traffic, it looks like there is an issue with IP address 10.1.1.1. This is your first clue on how Dark Kitten may have compromised the server. <br>
+
+Now that we have an indication of something wrong, let's take a closer look at 10.1.1.1 traffic. In order to get all the information about the indivual packets, we will add some flags to the command. <br>
+
+Let's isolate the source address 10.1.1.1 and include the hexidecimal output to take a closer look. The following command will include -vv for "very Verbose", or show all dta about the packet,  and -x to inlcude the hexidecimal output.
 
 Enter the following command 
 
