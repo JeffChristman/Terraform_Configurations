@@ -78,13 +78,15 @@ In analyzing the output, it appears that the traffic from 10.1.1.1 is fragmented
 
 Lets verify the finding and confirm that the packets from 10.1.1.1 are fragmented. For the next coomand, the following filter will parse the capture file looking inside the fields of the packet for fragmentation markers.  
 
->IP fragmentation is an Internet Protocol (IP) process that breaks packets into smaller pieces (fragments), so that the resulting pieces can pass through a link with a smaller maximum transmission unit (MTU) than the original packet size. The fragments are reassembled by the receiving host.
+>Note: IP fragmentation is an Internet Protocol (IP) process that breaks packets into smaller pieces (fragments), so that the resulting pieces can pass through a link with a smaller maximum transmission unit (MTU) than the original packet size. The fragments are reassembled by the receiving host.
 
 `'((ip[6:2] > 0) and (not ip[6] = 64))'`
 
 The above filter will parse the individual fields of the packet and look for fragemented packets within the whole trace.
 
-Enter the following 
+>Note: For a detailed explanation of tcpdump filters and how they are used, see https://gist.github.com/bom-d-van/b3ab3e6e924e31bacebae3a508cbd3eb
+
+Enter the following command: 
 
 `tcpdump -r capture.cap '((ip[6:2] > 0) and (not ip[6] = 64))' -vv -x`
 
@@ -96,9 +98,7 @@ Based on the above output, it appears the only fragemented packets are from 10.1
 ### Analysis Report 
 With the analysis complete, you meet with Globalmantics Security team to go over the results.
 
-From the analysis you completed, it was determined that Dark Kittens used a teardrop attack which exploits a bug in the code in older systems that handles large amounts of traffic. Teardrop is a type of DDOS  (Distributed Denial of Service) attack. The attack crashed the server and left it vulnerable for further exploitation. Further investigation determined that this server was used as a entry point to the Globalmantics.  
-
-Mitigation for the attacks is to update the server hardware and patch with the latest version of the software or decommision the server and remove from the network. 
+From the analysis you completed, it was determined that Dark Kittens used a teardrop attack which exploits a bug in the code in older systems that handles large amounts of traffic. Teardrop is a type of DDOS  (Distributed Denial of Service) attack. The attack crashed the server and left it vulnerable for further exploitation. Further investigation determined that this server was and older server that was neglected and used as a entry point to the Globalmantics. Mitigation for the attacks is to update the server hardware and patch with the latest version of the software or decommision the server and remove from the network. 
  
 
 
