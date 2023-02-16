@@ -69,12 +69,16 @@ Enter the following command
 
 `tcpdump -r capture.cap ip src host 10.1.1.1 -vv -xx`
 
-In analyzing the output, it appears that the traffic from 10.1.1.1 is fragmented and overlapping offsets. 
-
 ![](https://github.com/JeffChristman/PL_labs/blob/main/png/offset.png)
 
 
-Lets verify the finding and confirm that the packets from 10.1.1.1 are fragmented. For the next coomand, the following filter will parse the capture file looking for fragmented packets. 
+In analyzing the output, it appears that the traffic from 10.1.1.1 is fragmented and shows overlapping offsets. This appears to be a teardrop attack. 
+
+>Note: Some older operating systems contain a bug when reassembling packet. They grow confused during the reassembly phase, especially when the data packets seem to overlap by a byte or two. This causes the systems tp lock up and then crashes. A crashed server can't deliver resources
+
+Lets verify the finding and confirm that the packets from 10.1.1.1 are fragmented. For the next coomand, the following filter will parse the capture file looking inside the fields of the packet for fragmentation markers.  
+
+>IP fragmentation is an Internet Protocol (IP) process that breaks packets into smaller pieces (fragments), so that the resulting pieces can pass through a link with a smaller maximum transmission unit (MTU) than the original packet size. The fragments are reassembled by the receiving host.
 
 `'((ip[6:2] > 0) and (not ip[6] = 64))'`
 
