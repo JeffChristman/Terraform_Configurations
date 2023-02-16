@@ -23,7 +23,7 @@ SSH into the virtual machine
 `ssh -i id_rsa azureuser@<public_ip_address>`<br>
 <br>
 
-Copy the pcap file to the virtual machine to the /tmp directory
+Copy the pcap (in the sampledata folder) file to the virtual machine to the /tmp directory
 
 `scp -i id_rsa capture.cap azureuser@74.235.17.169:/tmp`<br>
 <br>
