@@ -61,9 +61,9 @@ Enter the following command:
 
 Now that we have just the IP traffic, it looks like there is an issue with IP address 10.1.1.1. This is your first clue on how Dark Kitten may have compromised the server. <br>
 
-Now that we have an indication of something wrong, let's take a closer look at 10.1.1.1 traffic. In order to get all the information about the indivual packets, we will add some flags to the command. <br>
+Now that we have an indication of something wrong, let's take a closer look at 10.1.1.1 traffic. In order to get all the information about the individual packets, we will add some flags to the command. <br>
 
-Let's isolate the source address 10.1.1.1 and include the hexidecimal output to take a closer look. The following command will include -vv for "very Verbose", or show all dta about the packet,  and -x to inlcude the hexidecimal output.
+Let's isolate the source address 10.1.1.1 and include the hexidecimal output to take a closer look. The following command will include -vv for "very Verbose", or show all data about the packet,  and -xx to inlcude the hexidecimal output.
 
 Enter the following command 
 
