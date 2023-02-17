@@ -19,7 +19,7 @@ The network security team has created an exact copy of the breached server and t
 
 The first step is to get the public IP address of the virtual machine so that we can login using SSH
 
-1. Login to the lab and open the main Azure Console. 
+1. Login to the lab and open the main AWS  Console. 
 2. On the left menu under settings, click on Resource Groups 
 
 ![](https://github.com/JeffChristman/PL_labs/blob/main/png/mypublicIP.png)
@@ -30,6 +30,9 @@ The first step is to get the public IP address of the virtual machine so that we
 
 
 5. Login to the virtual Machine with SSH with the provided private key using the following command.
+
+>Note CHMOD the pem file 
+
 
 `ssh -i id_rsa azureuser@<public_ip_address>`
 
