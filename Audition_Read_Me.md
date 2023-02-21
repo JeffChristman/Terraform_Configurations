@@ -7,13 +7,18 @@ The terraform environment was developed on a Windows 11 OS using WSLv2.
 
 ### Executing the script
 1. Run the terraform script to create the ubuntu server vm in the aws cloud. <br>
+`.\terraform plan -out "linux-vm-main.tfplan"` <br>
+`.\terraform apply "linux-vm-main.tfplan"`
 
 2. After the first run, the terrform-cloud-key-pair will be copied down to the local directory. Change the permissons by going to the properties and remove all inheritence and add the local user as the sole owner
 
+![image](https://github.com/JeffChristman/PL_labs/blob/main/png/finalpermission.png)
 
 
 
-3. Run the terraform again 
+
+3. Run the terraform again executing both the "plan" and the "apply"
+`.\terraform plan -out "linux-vm-main.tfplan"
 
 
 4. 
