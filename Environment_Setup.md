@@ -3,7 +3,8 @@ The following steps will set up the environment for the lab.
 
 ### Audition Lab Development Environment 
 
-The terraform environment was developed on a Windows 11 OS using WSLv2 and Terraform v1.3.9 
+The terraform environment was developed on a Windows 11 OS using WSLv2 and Terraform v1.3.9 <br>
+>The AWS credentials are set in the teraafrom.tfvars file.
 
 ### Executing the script
 1. Run the terraform script to create the ubuntu server vm in the aws cloud. <br>
