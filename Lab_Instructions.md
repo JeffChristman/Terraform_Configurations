@@ -2,7 +2,7 @@
 ## Analysing a network trace to determine how the Dark Kittens gained access to the server.<br>
 #### In this lab you will analyze the network packet trace and discover how the hacker inflitrated the network.
 
->Please see environment setup (Audition_Read_Me.md) before starting this lab
+>Please see environment setup (Environment_setup.md) before starting this lab
 
 You are the senior intrusion analyst at Globalmantics and after the most recent security breach, the CSO has asked for a post mortem of the event to determine the need to know how the Dark Kittens infiltraded network and stole the codebase of the CRM program. 
 
