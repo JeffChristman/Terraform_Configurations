@@ -1,12 +1,22 @@
 ## Installing the environment 
 The following steps will set up the environment for the lab.
 
-### Prerequisites for the environment setup 
+### Development Environment 
 
-Run the terraform script to create the test vm in the azure cloud. <br>
+The terraform environment was developed on a Windows 11 OS using WSLv2. 
+
+###Executing the script
+1. Run the terraform script to create the test vm in the azure cloud. <br>
 <br>
 
-Extract the private key and save locally by executing the following command 
+2. After the first run, the terrform-cloud-key-pair will be copied down to the local directory. Change the permissons by going to the properties and remove all inheritence and add the local user as the sole owner 
+
+3. Run the terraform again 
+
+
+4. 
+
+. Extract the private key and save locally by executing the following command 
 
 `.\terraform output -raw tls_private_key > id_rsa`
 
