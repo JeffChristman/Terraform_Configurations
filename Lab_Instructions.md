@@ -59,7 +59,7 @@ Enter the following command:
 
 `tcpdump -r capture.cap ip`
 
-![](https://github.com/JeffChristman/PL_labs/blob/main/png/tcpdumpip.png)
+![image](https://github.com/JeffChristman/PL_labs/blob/main/png/tcpdump_ip.png)
 
 
 Now that we have just the IP traffic, it looks like there is an issue with IP address 10.1.1.1. This is your first clue on how Dark Kitten may have compromised the server. <br>
