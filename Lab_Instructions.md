@@ -43,14 +43,14 @@ The first step is to get the public IP address of the virtual machine so that we
 
 
 ### Analyzing the packet trace 
-Now that you have logged into the compromized server, lets begin the intrusion analyses. The capture.cap file is the file we are interested in. 
+Now that you have logged into the compromized server, lets begin the intrusion analyses. <br>
 
-Start by looking at the whole trace and see if there is some interesting packets. <br>
-Enter the following command 
+The file we are interested in is "capture.cap". Let begin by looking at the whole trace and see if there is are some patterns or interesting packets. <br>
 
+From the console, Enter the following command <br>
 `tcpdump -r capture.cap`
 
-![](https://github.com/JeffChristman/PL_labs/blob/main/png/fullpacket.png)
+![image](https://github.com/JeffChristman/PL_labs/blob/main/png/firstcapture.png)
 
 
 The output is a bit overwhelming, lets filter the output to only IP traffic and make it easier to find interesting traffic. 
