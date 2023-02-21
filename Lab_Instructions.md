@@ -1,10 +1,13 @@
 # Intrusion Analysis: 
+>Please see environment setup (Environment_setup.md) before starting this lab
+
+
 ## Analysing a network trace to determine how the Dark Kittens gained access to the server.<br>
 #### In this lab you will analyze the network packet trace and discover how the hacker inflitrated the network.
 
->Please see environment setup (Environment_setup.md) before starting this lab
 
-You are the senior intrusion analyst at Globalmantics and after the most recent security breach, the CSO has asked for a post mortem of the event to determine the need to know how the Dark Kittens infiltraded network and stole the codebase of the CRM program. 
+
+You are the senior intrusion analyst at Globalmantics and after the most recent security breach, the CSO has asked for a post mortem of the event to determine  how the Dark Kittens infiltraded network and stole the codebase of the CRM program. 
 
 The network security team has created an exact copy of the breached server and the network packet capture that was taken during the security breach. It will be your job to login to the server, analyse the network trace and determine the method that was used to gain access. 
 
@@ -19,27 +22,24 @@ The network security team has created an exact copy of the breached server and t
 
 The first step is to get the public IP address of the virtual machine so that we can login using SSH
 
-1. Login to the lab and open the main AWS  Console. 
-2. On the left menu under settings, click on Resource Groups 
+1. Login to the lab and open the main AWS  Console. From the main menu select EC2 <br> <br>
+![image](https://github.com/JeffChristman/PL_labs/blob/main/png/ec2.png)
 
-![](https://github.com/JeffChristman/PL_labs/blob/main/png/mypublicIP.png)
+2. On the left menu, select EC2 Dashboard, then instances. <br><br>  
+![image](https://github.com/JeffChristman/PL_labs/blob/main/png/instances.png)
 
-3. Click on MyPublicIP and on the top right, you will see the assigned public IP address - write this down. 
+3. Check the checkbox next to the instance name, select Actions and then Connect:<br><br>
+![image](https://github.com/JeffChristman/PL_labs/blob/main/png/connect2.png)
 
-![](https://github.com/JeffChristman/PL_labs/blob/main/png/PublicIP.png)
+4. From the Conenction dialog, ensure you have SSH CLient highlights and copy the bottom example line.<br><br>
+![image](https://github.com/JeffChristman/PL_labs/blob/main/png/ssh_key.png)
 
+5. Open a terminal session on your local pc and paste the command:<br><br>
 
-5. Login to the virtual Machine with SSH with the provided private key using the following command.
+>'ssh -i "terraform-cloud-key-pair.pem" ubuntu@ec2-3-135-34-127.us-east-2.compute.amazonaws.com' <br><br>
 
->Note CHMOD the pem file 
+6. Now that you are logged into the server, we can begin the analysis
 
-
-`ssh -i id_rsa azureuser@<public_ip_address>`
-
-6. once connected, type YES to accept the certificate
-7. Then Navigate to the TMP directory by entering the following command: 
-
-`cd /tmp`
 
 
 ### Analyzing the packet trace 
