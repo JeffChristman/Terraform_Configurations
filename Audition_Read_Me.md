@@ -5,11 +5,13 @@ The following steps will set up the environment for the lab.
 
 The terraform environment was developed on a Windows 11 OS using WSLv2. 
 
-###Executing the script
-1. Run the terraform script to create the test vm in the azure cloud. <br>
-<br>
+### Executing the script
+1. Run the terraform script to create the ubuntu server vm in the aws cloud. <br>
 
-2. After the first run, the terrform-cloud-key-pair will be copied down to the local directory. Change the permissons by going to the properties and remove all inheritence and add the local user as the sole owner 
+2. After the first run, the terrform-cloud-key-pair will be copied down to the local directory. Change the permissons by going to the properties and remove all inheritence and add the local user as the sole owner
+
+
+
 
 3. Run the terraform again 
 
