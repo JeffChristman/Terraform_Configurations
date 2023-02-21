@@ -21,30 +21,18 @@ The terraform environment was developed on a Windows 11 OS using WSLv2.
 `.\terraform plan -out "linux-vm-main.tfplan"` <br>
 `.\terraform apply "linux-vm-main.tfplan"`
 
-4. The second run will have the correct permission on the private key and upload the test file "Capture.cap"
-
+4. The second run will have the correct permission on the private key and upload the test file "Capture.cap" <br>
 ![image](https://github.com/JeffChristman/PL_labs/blob/main/png/2ndrunn.png)
 
-. Extract the private key and save locally by executing the following command 
 
-`.\terraform output -raw tls_private_key > id_rsa`
+### Validate the lab setup <br>
+To validate the lab environment, login to the server using ssh 
+> `sh -i "terraform-cloud-key-pair.pem" ubuntu@ec2-3-135-34-127.us-east-2.compute.amazonaws.com`
 
-Note: This private key should be made available to the user as a download for the user to complete the lab <br>
-<br>
+Note: be sure to use the dns name as shown ion the last line of the output on the second run. I this example - 
+`ec2-3-135-34-127.us-east-2.compute.amazonaws.com`
 
-Extract the public IP address and note the address 
+One logged in, execute `ls -al` and verify that capture.cap is listed 
 
-`.\terraform output public_ip_address <public IP Address>`<br>
-<br>
-
-SSH into the virtual machine
-
-`ssh -i id_rsa azureuser@<public_ip_address>`<br>
-<br>
-
-Copy the pcap (in the sampledata folder) file to the virtual machine to the /tmp directory
-
-`scp -i id_rsa capture.cap azureuser@74.235.17.169:/tmp`<br>
-<br>
 
 The environment is ready for the lab. 
