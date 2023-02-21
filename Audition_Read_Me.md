@@ -29,7 +29,7 @@ The terraform environment was developed on a Windows 11 OS using WSLv2.
 To validate the lab environment, login to the server using ssh 
 > `sh -i "terraform-cloud-key-pair.pem" ubuntu@ec2-3-135-34-127.us-east-2.compute.amazonaws.com`
 
-Note: be sure to use the dns name as shown ion the last line of the output on the second run. I this example - <br> 
+Note: be sure to use the dns name as shown ion the last line of the output on the second run. in this example - <br> 
 `ec2-3-135-34-127.us-east-2.compute.amazonaws.com`
 
 One logged in, execute `ls -al` and verify that capture.cap is listed <br>
