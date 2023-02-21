@@ -10,18 +10,20 @@ The terraform environment was developed on a Windows 11 OS using WSLv2.
 `.\terraform plan -out "linux-vm-main.tfplan"` <br>
 `.\terraform apply "linux-vm-main.tfplan"`
 
+>Note: The first run will fail due to the public_ip address field changes during the runtime when associating the EIP ( Elastic IP) . Additonally, inheritence on the private key will need to be disabled inorder to connect to the AWS virtual nmachine. 
+
 2. After the first run, the terrform-cloud-key-pair will be copied down to the local directory. Change the permissons by going to the properties and remove all inheritence and add the local user as the sole owner
 
-![image](https://github.com/JeffChristman/PL_labs/blob/main/png/finalpermission.png)
-
-
+![image](https://github.com/JeffChristman/PL_labs/blob/main/png/finalpermission.png) <br>
 
 
 3. Run the terraform again executing both the "plan" and the "apply"
-`.\terraform plan -out "linux-vm-main.tfplan"
+`.\terraform plan -out "linux-vm-main.tfplan"` <br>
+`.\terraform apply "linux-vm-main.tfplan"`
 
+4. The second run will have the correct permission on the private key and upload the test file "Capture.cap"
 
-4. 
+![image](https://github.com/JeffChristman/PL_labs/blob/main/png/2ndrunn.png)
 
 . Extract the private key and save locally by executing the following command 
 
