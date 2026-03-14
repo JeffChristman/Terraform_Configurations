@@ -4,7 +4,7 @@ Provision the Azure Firewall and its diagnostics settigs to Azure Monitor.
 # Version
 | Version | Date | Release Notes | Author |
 |---|---|---|---|
-| 1.0 | July22 | First release | viktor.lee |
+| 1.0 | July22 | First release | jeff.christman |
 
 # Developed On
 | Module Version | Terraform Version | AzureRM Version |
