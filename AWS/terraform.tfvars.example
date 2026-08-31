@@ -1,0 +1,9 @@
+vpc_cidr                         = "10.10.0.0/16"
+public_subnet_cidr               = "10.10.1.0/24"
+aws_region                       = "us-east-1"
+linux_instance_type             = "t3.micro"
+linux_associate_public_ip_address = false
+linux_root_volume_size          = 20
+linux_root_volume_type          = "gp3"
+linux_data_volume_size          = 20
+linux_data_volume_type          = "gp3"
