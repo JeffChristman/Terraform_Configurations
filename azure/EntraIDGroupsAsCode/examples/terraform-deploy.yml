@@ -1,0 +1,74 @@
+# Deployment blueprint. Copy to .github/workflows only after configuring the
+# protected environment and repository variables documented below.
+name: Deploy Entra group configuration
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_apply:
+        description: "Type APPLY to deploy the reviewed plan"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  id-token: write
+
+env:
+  TF_IN_AUTOMATION: "true"
+  ARM_USE_OIDC: "true"
+  ARM_CLIENT_ID: ${{ vars.AZURE_CLIENT_ID }}
+  ARM_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
+  TF_VAR_tenant_id: ${{ vars.AZURE_TENANT_ID }}
+
+jobs:
+  deploy:
+    if: ${{ inputs.confirm_apply == 'APPLY' }}
+    runs-on: ubuntu-latest
+    environment: entra-production
+
+    steps:
+      - name: Check out approved configuration
+        uses: actions/checkout@v4
+
+      - name: Authenticate with federated workload identity
+        uses: azure/login@v2
+        with:
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          allow-no-subscriptions: true
+
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.8.5"
+
+      - name: Initialize encrypted remote state
+        working-directory: azure/EntraIDGroupsAsCode
+        run: |
+          terraform init -input=false \
+            -backend-config="resource_group_name=${{ vars.TFSTATE_RESOURCE_GROUP }}" \
+            -backend-config="storage_account_name=${{ vars.TFSTATE_STORAGE_ACCOUNT }}" \
+            -backend-config="container_name=${{ vars.TFSTATE_CONTAINER }}" \
+            -backend-config="key=entra-groups.tfstate" \
+            -backend-config="use_oidc=true" \
+            -backend-config="client_id=${{ vars.AZURE_CLIENT_ID }}" \
+            -backend-config="tenant_id=${{ vars.AZURE_TENANT_ID }}"
+
+      - name: Create reviewed plan
+        working-directory: azure/EntraIDGroupsAsCode
+        run: terraform plan -input=false -out=entra-groups.tfplan
+
+      - name: Apply reviewed plan
+        working-directory: azure/EntraIDGroupsAsCode
+        run: terraform apply -input=false -auto-approve entra-groups.tfplan
+
+# Required repository/environment variables:
+# - AZURE_CLIENT_ID
+# - AZURE_TENANT_ID
+# - TFSTATE_RESOURCE_GROUP
+# - TFSTATE_STORAGE_ACCOUNT
+# - TFSTATE_CONTAINER
+#
+# Supply dynamic_user_groups through an approved, non-secret environment file
+# or generated TF_VAR_dynamic_user_groups JSON. Do not store credentials in it.

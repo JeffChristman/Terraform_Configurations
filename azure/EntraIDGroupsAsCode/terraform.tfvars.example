@@ -1,0 +1,19 @@
+# Replace these synthetic identifiers only in a protected environment or an
+# ignored local terraform.tfvars file. Do not commit real tenant data.
+tenant_id = "00000000-0000-0000-0000-000000000000"
+
+dynamic_user_groups = {
+  all-enabled-employees = {
+    display_name     = "SG-DYN-All-Enabled-Employees"
+    description      = "All enabled employee identities; membership is evaluated by Microsoft Entra ID."
+    membership_rule  = "(user.accountEnabled -eq true) and (user.employeeType -eq \"Employee\")"
+    owner_object_ids = ["11111111-1111-1111-1111-111111111111"]
+  }
+
+  cloud-engineering = {
+    display_name     = "SG-DYN-Cloud-Engineering"
+    description      = "Enabled identities assigned to the Cloud Engineering department."
+    membership_rule  = "(user.accountEnabled -eq true) and (user.department -eq \"Cloud Engineering\")"
+    owner_object_ids = ["11111111-1111-1111-1111-111111111111"]
+  }
+}

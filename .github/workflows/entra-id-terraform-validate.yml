@@ -1,0 +1,42 @@
+name: Validate Entra ID Terraform
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "azure/EntraIDGroupsAsCode/**"
+      - ".github/workflows/entra-id-terraform-validate.yml"
+  pull_request:
+    paths:
+      - "azure/EntraIDGroupsAsCode/**"
+      - ".github/workflows/entra-id-terraform-validate.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: azure/EntraIDGroupsAsCode
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.8.5"
+
+      - name: Check formatting
+        run: terraform fmt -check -recursive
+
+      - name: Initialize providers without remote state
+        run: terraform init -backend=false -input=false
+
+      - name: Validate configuration
+        run: terraform validate

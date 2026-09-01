@@ -11,7 +11,7 @@ These configurations are educational references, not turnkey production modules.
 | Azure networking and compute | Resource groups, VNets, subnets, NSGs, public IPs, Linux and Windows VMs |
 | Azure security and governance | Azure Firewall, Azure Policy definitions, initiatives, assignments, exemptions, and remediation |
 | Azure operations | Log Analytics, Event Hubs, storage, and diagnostic settings |
-| Azure identity | Azure AD Domain Services and supporting identity resources |
+| Azure identity | Azure AD Domain Services and Microsoft Entra ID Groups-as-Code |
 | Azure data | Azure SQL servers, databases, elastic pools, failover groups, and diagnostics |
 | AWS | VPC, subnet, route table, internet gateway, EC2, EIP, and SSH key provisioning |
 
@@ -26,6 +26,7 @@ azure/AzureMonitor/          Monitoring foundation
 azure/AzureMonitorOnboarding Diagnostic settings
 azure/AzurePolicy/           Governance policy patterns
 azure/AzureADDS/             Managed domain services
+azure/EntraIDGroupsAsCode/   Dynamic Entra security groups managed through Terraform and Git
 azure/AzureSQLDatabase/      SQL and failover patterns
 ```
 
